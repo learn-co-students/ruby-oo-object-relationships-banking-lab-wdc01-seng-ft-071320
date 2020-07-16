@@ -1,3 +1,4 @@
+require_relative "./transfer.rb"
 class BankAccount
     attr_accessor :balance, :status
     attr_reader :name
@@ -6,8 +7,8 @@ class BankAccount
         @balance = 1000
         @status = 'open'
     end
-    def deposit (ammount)
-        self.balance += ammount
+    def deposit (amount)
+        self.balance += amount
     end
     def display_balance
         "Your balance is $#{self.balance}."
