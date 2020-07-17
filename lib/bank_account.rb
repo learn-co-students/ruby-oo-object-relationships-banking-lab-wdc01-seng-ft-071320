@@ -10,6 +10,9 @@ class BankAccount
         @status = "open"
     end
 
+    # sender_acct = BankAccount.new
+
+
     def deposit(amount)  #deposit money into its account
         total = self.balance += amount 
   

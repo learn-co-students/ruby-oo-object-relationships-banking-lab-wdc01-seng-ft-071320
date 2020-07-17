@@ -13,8 +13,13 @@ class Transfer
   def valid?
       if sender.balance > 0 && receiver.balance > 0
         return true
-      # else
-      #   return false
+    
+        sender_acct = BankAccount.new
+        first_transfer = Transfer.new(sender, receiver, 50)
+
+        first_transfer.BankAccount = sender_acct
+
+        
       end
   end
 
