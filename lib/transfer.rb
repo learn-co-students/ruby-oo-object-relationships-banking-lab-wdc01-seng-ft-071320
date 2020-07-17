@@ -11,20 +11,15 @@ class Transfer
   end
 
   def valid?
-      if sender.balance > 0 && receiver.balance > 0
-        return true
-    
-        sender_acct = BankAccount.new
-        first_transfer = Transfer.new(sender, receiver, 50)
-
-        first_transfer.BankAccount = sender_acct
-
-        
-      end
+    self.sender.valid? && self.receiver.valid?
   end
 
   def execute_transaction
-
+      if receiver.balance = self.amount + receiver.balance
+      return self.status = "complete"
+    else
+      return self.status = "rejected"
+    end
   end
 
   def reverse_transfer
